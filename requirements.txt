@@ -1,0 +1,2 @@
+mistralai-workflows>=3.10
+paramiko>=3.5
