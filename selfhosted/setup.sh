@@ -7,7 +7,7 @@ if [ ! -f .env ]; then
   echo "Clé API Mistral requise (console.mistral.ai > Clés API)."
   read -rsp "Collez votre clé API Mistral : " KEY
   echo
-  echo "MISTRAL_API_KEY=$KEY" > .env
+  printf "MISTRAL_API_KEY=%s\nDEPLOYMENT_NAME=allovente-ssh-gateway\n" "$KEY" > .env
   chmod 600 .env
   echo ".env créé."
 fi
